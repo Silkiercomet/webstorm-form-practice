@@ -21,7 +21,10 @@ body {
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   font-family: "Karla", 'Sans-serif', serif;
-
+  background-color: hsl(148, 38%, 91%);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
 }
 
 /* 5. Improve media defaults */
@@ -33,6 +36,7 @@ img, picture, video, canvas, svg {
 /* 6. Inherit fonts for form controls */
 input, button, textarea, select {
   font: inherit;
+  color: hsl(187, 24%, 22%);
 }
 
 /* 7. Avoid text overflows */
@@ -47,5 +51,95 @@ p {
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
+/* utilities */
+.error-message{
+  color: hsl(0, 66%, 54%);
+  font-size: .9rem;
+  display: none;
+}
 
+.wrapper{
+  display: grid;
+  background-color: white;
+  padding:  2rem;
+  gap: 1rem;
+  margin: 1.5rem 1rem;
+  border-radius: 10px;
+}
+h1{
+  color: hsl(187, 24%, 22%);
+}
+form{
+  display: grid;
+  gap: 1rem;
+  color: hsl(187, 24%, 22%);
+}
+.entry{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .5rem;
+}
+.dot{
+  font-size: .7rem;
+  color: hsl(169, 82%, 27%);
+}
+/* inputs */
 
+input[type="text"], input[type="email"]{
+  padding: .5rem 1rem;
+  border-radius: 7px;
+  border: 1px solid hsl(186, 15%, 59%);
+
+}
+input[type="text"]:focus, input[type="email"]:focus {
+  outline: 1px solid hsl(169, 82%, 27%);
+}
+input[type="radio"] {
+  accent-color: hsl(169, 82%, 27%);
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+ul li label{
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 7px;
+  padding: .5rem 2.5rem;
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+
+}
+ul li{
+  position: relative;
+}
+input[type="radio"]{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 17px;
+}
+input[type="radio"]:checked + label{
+  background-color: hsl(148, 38%, 91%);
+  border-color: hsl(169, 82%, 27%);
+}
+
+.entry:last-of-type div{
+  display: flex;
+
+  max-width: 100%;
+}
+.entry:last-of-type div label{
+  max-width: 75%;
+  padding-left: 15px;
+}
+button[type="submit"] {
+  background-color: hsl(187, 24%, 22%);
+  color: white;
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+}

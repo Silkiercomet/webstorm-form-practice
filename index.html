@@ -17,7 +17,6 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
-|
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
@@ -28,52 +27,60 @@
   <h1>Contact Us</h1>
   <form>
     <div class="entry">
-      <label for="Name">First Name <span>*</span></label>
+      <label for="Name">First Name <span class="dot">*</span></label>
       <input type="text" name="Name" id="Name">
+      <p class="error-message">This field is required</p>
     </div>
     <div class="entry">
-      <label for="Last">Last Name <span>*</span></label>
+      <label for="Last">Last Name <span class="dot">*</span></label>
       <input type="text" name="Last" id="Last">
+      <p class="error-message">This field is required</p>
     </div>
     <div class="entry">
-      <label for="Email">Email Address <span>*</span></label>
-      <input type="text" name="Email" id="Email">
+      <label for="Email">Email Address <span class="dot">*</span></label>
+      <input type="text" name="Email" id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+      <p class="error-message">Please enter a valid email address</p>
     </div>
     <div class="entry">
       <label>Query Type</label>
       <ul>
         <li>
-          <input type="radio" name="General" id="General">
+          <input type="radio" name="query" id="General">
           <label for="General">General Enquiry</label>
         </li>
         <li>
-          <input type="radio" name="Support" id="Support">
+          <input type="radio" name="query" id="Support">
           <label for="Support">Support Request</label>
         </li>
       </ul>
+      <p class="error-message">Please select a query type</p>
     </div>
     <div class="entry">
-      <label for="Message">Email Address <span>*</span></label>
-      <textarea id="Message"></textarea>
+      <label for="Message">Email Address <span class="dot">*</span></label>
+      <textarea id="Message" rows="6"></textarea>
+      <p class="error-message">This field is required</p>
     </div>
     <div class="entry">
-      <input type="checkbox" name="consent" id="consent">
-      <label for="consent">I consent to being contacted by the team <span>*</span></label>
+      <div>
+        <input type="checkbox" name="consent" id="consent">
+        <label for="consent">I consent to being contacted by the team <span class="dot">*</span></label>
+      </div>
+      <p class="error-message">To submit this form, please consent to being contacted</p>
     </div>
     <button type="submit">Submit</button>
   </form>
 </main>
 
   Email Address
-  Please enter a valid email address
-  This field is required
-  Please select a query type
+
+
+
 
   Message
   This field is required
 
 
-  To submit this form, please consent to being contacted
+
 
   Submit
 
