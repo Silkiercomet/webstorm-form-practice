@@ -111,7 +111,7 @@ ul li label{
   display: flex;
   gap: 0.7rem;
   align-items: center;
-
+  cursor: pointer;
 }
 ul li{
   position: relative;
@@ -121,6 +121,7 @@ input[type="radio"]{
   top: 50%;
   transform: translateY(-50%);
   left: 17px;
+
 }
 input[type="radio"]:checked + label{
   background-color: hsl(148, 38%, 91%);
@@ -132,9 +133,11 @@ input[type="radio"]:checked + label{
 
   max-width: 100%;
 }
-.entry:last-of-type div label{
-  max-width: 75%;
-  padding-left: 15px;
+.entry:last-of-type label{
+  max-width: 85%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 button[type="submit"] {
   background-color: hsl(187, 24%, 22%);
@@ -142,4 +145,57 @@ button[type="submit"] {
   border: none;
   padding: .5rem 1rem;
   border-radius: 5px;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+button[type="submit"]:hover {
+  background-color: hsl(137, 42%, 45%);
+
+}
+#consent{
+  display: none;
+}
+.custom-checkbox {
+  display: inline-block;
+  min-width: 15px;
+  min-height: 15px;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 2px;
+  position: relative;
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+}
+.custom-checkbox img{
+  opacity: 0;
+  min-width: 15px;
+  min-height: 15px;
+  transition: 100ms ease-in-out;
+}
+input[type="checkbox"]:checked + .custom-checkbox{
+  border: 1px solid transparent;
+}
+input[type="checkbox"]:checked + .custom-checkbox img{
+  opacity: 1;
+}
+
+@media screen and (width > 600px) {
+  .wrapper{
+    min-width: 600px;
+  }
+  form{
+    grid-template-columns: 1fr 1fr;
+  }
+  .entry ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .entry:nth-child(3),.entry:nth-child(4),.entry:nth-child(5),button[type="submit"]{
+    grid-column: span 2;
+  }
+  .entry:last-of-type label{
+    max-width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
 }
