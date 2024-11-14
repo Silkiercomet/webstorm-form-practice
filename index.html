@@ -28,24 +28,24 @@
   <form>
     <div class="entry">
       <label for="Name">First Name <span class="dot">*</span></label>
-      <input type="text" name="Name" id="Name">
+      <input class=" border-state" type="text" name="Name" id="Name">
       <p class="error-message">This field is required</p>
     </div>
     <div class="entry">
       <label for="Last">Last Name <span class="dot">*</span></label>
-      <input type="text" name="Last" id="Last">
+      <input class=" border-state" type="text" name="Last" id="Last">
       <p class="error-message">This field is required</p>
     </div>
     <div class="entry">
       <label for="Email">Email Address <span class="dot">*</span></label>
-      <input type="text" name="Email" id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+      <input class="border-state" type="text" name="Email" id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" >
       <p class="error-message">Please enter a valid email address</p>
     </div>
     <div class="entry">
       <label>Query Type</label>
       <ul>
         <li>
-          <input type="radio" name="query" id="General">
+          <input type="radio" name="query" id="General" class="border-state">
           <label for="General">General Enquiry</label>
         </li>
         <li>
@@ -56,14 +56,14 @@
       <p class="error-message">Please select a query type</p>
     </div>
     <div class="entry">
-      <label for="Message">Email Address <span class="dot">*</span></label>
-      <textarea id="Message" rows="6"></textarea>
+      <label for="Message">Message <span class="dot">*</span></label>
+      <textarea class="border-state" id="Message" rows="6"></textarea>
       <p class="error-message">This field is required</p>
     </div>
     <div class="entry">
         <label for="consent">
           <input type="checkbox" name="consent" id="consent">
-          <span class="custom-checkbox"><img src="assets/images/icon-checkbox-check.svg" alt="checkbox check"></span>
+          <span class="custom-checkbox  border-state"><img src="assets/images/icon-checkbox-check.svg" alt="checkbox check"></span>
           <span>I consent to being contacted by the team <span class="dot">*</span></span>
         </label>
         <p class="error-message">To submit this form, please consent to being contacted</p>
@@ -72,21 +72,8 @@
   </form>
 </main>
 
-  Email Address
 
 
-
-
-  Message
-  This field is required
-
-
-
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
   <script src="js/app.js"></script>
 
 </body>
