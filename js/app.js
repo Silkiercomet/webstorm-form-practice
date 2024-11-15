@@ -1,5 +1,5 @@
 const form = document.querySelector('form');
-
+const successCard = document.querySelector('.success-card');
 form.addEventListener('submit', (event) => {
   event.preventDefault(); // Prevent default form submission
 
@@ -22,7 +22,10 @@ form.addEventListener('submit', (event) => {
     console.log('Query Type:', query);
     console.log('Message:', message);
     console.log('Consent:', consent);
-
+    successCard.classList.add("show-success-card")
+    setTimeout(() => {
+      successCard.classList.remove("show-success-card")
+    }, "4000");
     // You can also submit the form data to a server using AJAX or other methods
   }
 });

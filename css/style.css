@@ -203,3 +203,28 @@ input[type="checkbox"]:checked + .custom-checkbox img{
 .border-error{
   border-color: hsl(0, 66%, 54%) !important;
 }
+.success-card{
+  position: fixed;
+  top: 0px;
+
+  background-color: hsl(187, 24%, 22%);
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 300ms ease-in-out;
+}
+.show-success-card{
+  top: 10px;
+  opacity: 1;
+}
+.success-card span{
+  display: flex;
+  gap: 1rem;
+}
+.success-card p{
+  color: hsl(186, 15%, 59%);
+  padding-top: .5rem;
+}
